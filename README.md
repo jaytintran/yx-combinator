@@ -1,36 +1,88 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🚀 Startup Showcase Platform
 
-## Getting Started
+A Next.js 15 web app for entrepreneurs to submit and showcase their startup ideas, inspired by Y Combinator.
 
-First, run the development server:
+## ⚙️ Tech Stack
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+- **React 19**
+- **Next.js 15**
+- **Sanity** (Headless CMS for content management)
+- **TailwindCSS** (Utility-first styling)
+- **ShadCN** (UI components)
+- **TypeScript**
+
+## 🔋 Features
+
+### 🎯 Core Functionalities
+
+- **Live Content API**: Displays the latest startup ideas dynamically on the homepage using Sanity's Content API.
+- **GitHub Authentication**: Users can log in easily using their GitHub account.
+- **Pitch Submission**: Users can submit startup ideas, including title, description, category, and multimedia links (image or video).
+- **View Pitches**: Browse through submitted ideas with filtering options by category.
+- **Pitch Details Page**: Click on any pitch to view its details, with multimedia and description displayed.
+- **Profile Page**: Users can view the list of pitches they've submitted.
+- **Editor Picks**: Admins can highlight top startup ideas using the "Editor Picks" feature managed via Sanity Studio.
+- **Views Counter**: Tracks the number of views for each pitch instead of an upvote system.
+- **Search**: Efficient search functionality to load and view pitches quickly.
+- **Minimalistic Design**: Fresh and simple UI with essential pages for ease of use and a clean aesthetic.
+
+### 🛠 Additional Features
+
+- Built-in support for the latest **React 19** and **Next.js 15** features.
+- Modular code architecture for **scalability** and **reusability**.
+- Optimized performance with **server-side rendering (SSR) and static generation (SSG)**.
+
+## 🚀 Getting Started
+
+### 1️⃣ Clone the Repository
+
+```sh
+git clone https://github.com/your-username/startup-showcase.git
+cd startup-showcase
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### 2️⃣ Install Dependencies
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```sh
+yarn install  # or npm install
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### 3️⃣ Set Up Environment Variables
 
-## Learn More
+Create a `.env.local` file in the root directory and add your required API keys and credentials.
 
-To learn more about Next.js, take a look at the following resources:
+```
+NEXT_PUBLIC_SANITY_PROJECT_ID=your_sanity_project_id
+NEXT_PUBLIC_SANITY_DATASET=production
+GITHUB_CLIENT_ID=your_github_client_id
+GITHUB_CLIENT_SECRET=your_github_client_secret
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### 4️⃣ Run the Development Server
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```sh
+yarn dev  # or npm run dev
+```
 
-## Deploy on Vercel
+Visit **http://localhost:3000** to view the app.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 📦 Deployment
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+This app can be deployed on **Vercel** for seamless Next.js support.
+
+```sh
+yarn build  # or npm run build
+yarn start  # Start production server
+```
+
+## 🛠 Contributing
+
+Contributions are welcome! Feel free to fork this repository and submit a pull request.
+
+## 📜 License
+
+MIT License. Feel free to use and modify the project as needed.
+
+---
+
+Made with ❤️ using Next.js 15, React 19, and Sanity.

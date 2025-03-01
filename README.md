@@ -1,15 +1,17 @@
 # 🚀 Startup Showcase Platform
 
-A Next.js 15 web app for entrepreneurs to submit and showcase their startup ideas, inspired by Y Combinator.
+A platform for entrepreneurs to share their startup ideas and get discovered by investors, mentors and users. Inspired by Y Combinator, this app is built with the latest web technologies like React 19, Next.js 15, Sanity, TailwindCSS and TypeScript. It's a fullstack web app with a headless CMS, user authentication, and a user-friendly interface to explore startup ideas.
+
 
 ## ⚙️ Tech Stack
 
-- **React 19**
-- **Next.js 15**
-- **Sanity** (Headless CMS for content management)
-- **TailwindCSS** (Utility-first styling)
-- **ShadCN** (UI components)
-- **TypeScript**
+- **React 19** (Component-based frontend framework)
+- **Next.js 15** (Server-side rendered (SSR) fullstack framework)
+- **Sanity** (Headless Content Management System (CMS) for content management)
+- **TailwindCSS** (Utility-first, highly customizable CSS framework)
+- **ShadCN** (Custom UI components for rapid development)
+- **TypeScript** (Statically typed language for maintainability and scalability)
+- **NextAuth** (Authentication and authorization framework for secure user management)
 
 ## 🔋 Features
 
@@ -74,14 +76,6 @@ This app can be deployed on **Vercel** for seamless Next.js support.
 yarn build  # or npm run build
 yarn start  # Start production server
 ```
-
-## 🛠 Contributing
-
-Contributions are welcome! Feel free to fork this repository and submit a pull request.
-
-## 📜 License
-
-MIT License. Feel free to use and modify the project as needed.
 
 ---
 

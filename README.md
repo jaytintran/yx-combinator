@@ -2,6 +2,13 @@
 
 A platform for entrepreneurs to share their startup ideas and get discovered by investors, mentors and users. Inspired by Y Combinator, this app is built with the latest web technologies like React 19, Next.js 15, Sanity, TailwindCSS and TypeScript. It's a fullstack web app with a headless CMS, user authentication, and a user-friendly interface to explore startup ideas.
 
+## Intro
+
+A Next.js 15 web app for entrepreneurs to submit and showcase their startup ideas, inspired by Y Combinator.
+
+- **Built a platform for entrepreneurs** to easily submit and showcase startup ideas, enhancing discoverability.
+- **Integrated modern technologies** like React 19 and Next.js 15 for an optimized, high-performance user interface.
+- **Utilized a headless CMS with GitHub authentication** for secure user management and dynamic content updates.
 
 ## ⚙️ Tech Stack
 
@@ -53,7 +60,7 @@ yarn install  # or npm install
 
 Create a `.env.local` file in the root directory and add your required API keys and credentials.
 
-```
+```sh
 NEXT_PUBLIC_SANITY_PROJECT_ID=your_sanity_project_id
 NEXT_PUBLIC_SANITY_DATASET=production
 GITHUB_CLIENT_ID=your_github_client_id

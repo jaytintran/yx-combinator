@@ -1,26 +1,61 @@
+import SearchForm from "@/components/SearchForm";
+import StartupCard from "@/components/StartupCard";
+// import go from "@/assets/go.svg";
+
 // import Image from "next/image";
+export default async function Home({
+  searchParams,
+}: {
+  searchParams: Promise<{ query?: string }>;
+}) {
+  const query = (await searchParams).query;
 
-export default async function Home() {
-  const response = await fetch("https://jsonplaceholder.typicode.com/albums");
-  if (!response.ok) throw new Error("Failed to fetch data");
-
-  const albums = await response.json();
+  const posts = [
+    {
+      _id: 1,
+      _createdAt: new Date(),
+      views: 13,
+      author: {
+        _id: 1,
+        name: "Eddie Morra",
+        image: "https://i.pravatar.cc/300",
+      },
+      description: "Example of description",
+      // image: go,
+      image: "https://placehold.co/600x400",
+      category: "Design",
+      title: "We Robot",
+    },
+  ];
 
   return (
     <>
-      <h1 className="heading">Home</h1>
+      <section className="pink-container pattern">
+        <h1 className="heading">
+          Find or Create Your Favorite Start-up FAST. <br /> Connect with Other
+          Solopreneurs.
+        </h1>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5 container mx-auto py-10">
-        {albums.slice(0, 10).map((album: { id: number; title: string }) => (
-          <div
-            key={album.id}
-            className="bg-white text-black shadow-md rounded-lg p-4 transition hover:scale-105 hover:shadow-lg"
-          >
-            <h2 className="text-lg font-bold mb-2">{album.title}</h2>
-            <p className="text-gray-600 text-xs">{album.id}</p>
-          </div>
-        ))}
-      </div>
+        <p className="sub-heading !max-w-3xl">
+          Submit Ideas, Vote on Pitches, & Get Noticed.
+        </p>
+
+        <SearchForm query={query} />
+      </section>
+
+      <section className="section-container">
+        <p className="text-30-semibold">
+          {query ? `Search Results for "${query}"` : "Trending Startups"}
+        </p>
+
+        <ul className="mt-7 card-grid">
+          {posts?.length > 0 ? (
+            posts.map((post) => <StartupCard key={post?._id} post={post} />)
+          ) : (
+            <p>No results found</p>
+          )}
+        </ul>
+      </section>
     </>
   );
 }

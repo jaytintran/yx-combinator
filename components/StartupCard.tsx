@@ -22,19 +22,19 @@ const StartupCard = ({ post }: { post: StartupTypeCard }) => {
     <li className="startup-card group">
       {/* Project Date & Views Count */}
       <div className="flex-between">
-        <p className="start-up_date">{formatDate(_createdAt)}</p>
+        <p className="start-up_date text-12-thin">{formatDate(_createdAt)}</p>
 
         <div className="flex-center gap-1.5">
           <EyeIcon size={20} className="text-primary-300" />
-          <span className="text-16-medium">{views}</span>
+          <span className="text-12-thin">{views}</span>
         </div>
       </div>
 
       {/* Project Overview & Author */}
-      <div className="flex-between mt-10 gap-5">
+      <div className="flex-between mt-6 gap-5">
         <div className="flex-1">
           <Link href={`/user/${authorId}`}>
-            <p className="text-16-medium line-clamp-1">{name}</p>
+            <p className="text-12-thin line-clamp-1 text-xs">{name}</p>
           </Link>
           <Link href={`/startup/${_id}`}>
             <h3 className="startup-card_title">{title}</h3>

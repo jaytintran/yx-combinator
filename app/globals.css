@@ -1,7 +1,7 @@
 /* global.css */
-nextjs-portal {
+/* nextjs-portal {
   display: none;
-}
+} */
 
 /* Core Tailwind Imports */
 @tailwind base;
@@ -120,6 +120,9 @@ nextjs-portal {
   }
   .text-14-normal {
     @apply font-normal text-sm text-white-100/80;
+  }
+  .text-12-light {
+    @apply font-light text-[14px] text-black-100;
   }
   .no-result {
     @apply text-black-100 text-sm font-normal;

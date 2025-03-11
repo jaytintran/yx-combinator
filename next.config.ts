@@ -14,7 +14,32 @@ const nextConfig: NextConfig = {
         hostname: "*",
         pathname: "/**",
       },
+      {
+        protocol: "https",
+        hostname: "placehold.co",
+        pathname: "/**",
+      },
     ],
+  },
+  // experimental: {
+  //   ppr: "incremental",
+  // },
+  devIndicators: {
+    appIsrStatus: true,
+    buildActivity: true,
+    buildActivityPosition: "bottom-right",
+  },
+  webpack: (config) => {
+    return {
+      ...config,
+      resolve: {
+        ...config.resolve,
+        alias: {
+          ...config.resolve?.alias,
+          "react-dom": "react-dom",
+        },
+      },
+    };
   },
 };
 

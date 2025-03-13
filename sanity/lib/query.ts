@@ -57,3 +57,9 @@ export const STARTUP_QUERY = defineQuery(
     link
 }`
 );
+
+export const STARTUP_VIEWS_QUERY = defineQuery(
+  `*[_type == "startup" && _id == $id][0] {
+    views
+  }`
+);

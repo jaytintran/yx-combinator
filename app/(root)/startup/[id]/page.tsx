@@ -1,5 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
-import React from "react";
+import React, { Suspense } from "react";
 import { STARTUP_QUERY } from "@/sanity/lib/query";
 import { sanityFetch } from "@/sanity/lib/live";
 import { Button } from "@/components/ui/button";
@@ -10,6 +10,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { formatDate } from "@/lib/utils";
 import markdownit from "markdown-it";
+import View from "@/components/View";
 
 // Remove this if you're not using the canary version of Next.js
 // export const experimental_ppr = true;
@@ -127,6 +128,10 @@ const Page = async ({ params }: { params: Promise<{ id: string }> }) => {
         </section>
 
         <hr />
+
+        <Suspense>
+          <View id={id} />
+        </Suspense>
 
         {/* Related Startups Section */}
         <section className="mt-8">

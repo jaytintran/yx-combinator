@@ -1,5 +1,7 @@
 # 🚀 Startup Showcase Platform
 
+![image](https://github.com/user-attachments/assets/28855e25-01ef-43db-b476-8a6ff93d63ea)
+
 A platform for entrepreneurs to share their startup ideas and get discovered by investors, mentors and users. Inspired by Y Combinator, this app is built with the latest web technologies like React 19, Next.js 15, Sanity, TailwindCSS and TypeScript. It's a fullstack web app with a headless CMS, user authentication, and a user-friendly interface to explore startup ideas.
 
 ## Intro

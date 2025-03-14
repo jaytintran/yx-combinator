@@ -133,7 +133,7 @@
     @apply px-6 py-10 max-w-7xl mx-auto;
   }
   .pink-container {
-    @apply w-full min-h-[530px] flex justify-center items-center flex-col py-10 px-6;
+    @apply w-full min-h-[530px] bg-primary-300 flex justify-center items-center flex-col py-10 px-6;
     background-image: url("/assets/hero-background.jpg");
     background-size: cover;
     background-position: center;
